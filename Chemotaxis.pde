@@ -23,7 +23,7 @@
    bacteria()
    {
    myColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
-   mySize = 30;
+   mySize = 10;
    myX = (int)(Math.random()*400);
    myY = (int)(Math.random()*400);
    }
