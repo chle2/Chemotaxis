@@ -19,7 +19,7 @@
  class Bacteria    
  {     
    int mySize, myX, myY, myColor;
-   Bacteria()
+   Bob()
    {
    myColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
    mySize = 30;
