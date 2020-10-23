@@ -19,7 +19,13 @@
  class Bacteria    
  {     
    int mySize, myX, myY, myColor;
-   
+   Bacteria()
+   {
+   myColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+   mySize = 30;
+   myX = (int)(Math.random()*400);
+   myY = (int)(Math.random()*400);
+   }
    void move() {
      if (myX > 250 && myY < 250){
    myX = myX + (int)(Math.random()*4)-3;
@@ -44,10 +50,5 @@
    ellipse(myX,myY,mySize,mySize);
    }
    
-   Bacteria(int x, int y){
-   myColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
-   mySize = 30;
-   myX = x;
-   myY = y;
  }
  }
