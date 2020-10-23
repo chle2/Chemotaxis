@@ -15,37 +15,39 @@
     background(255);
     bob[i].move();
     bob[i].show();
-  }  
-  class Bacteria    
-  {     
-  	//lots of java!   
-    int myX;
-    int myY; 
-    int myColor;
-    myX = (int)(Math.random()*400);
-    myY = (int)(Math.random()*400);
-    myColor = color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255),(int)(Math.random()*255));
-    void move()
-    {
-    if(mouseX > 250 && mouseY > 250)
-    {
-  			myX = myX + (int)(Math.random()*5);
-        myY = myY + (int)(Math.random()*5);
-     }
-     else if (mouseX < 250 && mouseY < 250) 
-      {
-  			myX = myX - (int)(Math.random()*5);
-        myY = myY - (int)(Math.random()*5);
-  		}
-      else if(mouseY < 250 && mouseX > 250)
-  		{
-        myX = myX + (int)(Math.random()*5);
-  			myY = myY - (int)(Math.random()*5);
-      }
-    }
-    void show()
-    {
-    fill(myColor); 
-    Stroke(myColor);
-    ellipse(myX, myY, 20,20)
-  }     
+  }      
+ class Bacteria    
+ {     
+   int mySize, myX, myY, myColor;
+   
+   void move() {
+     if (myX > 250 && myY < 250){
+   myX = myX + (int)(Math.random()*4)-3;
+   myY = myY + (int)(Math.random()*4);
+     }
+     if (myX < 250 && myY < 250){
+   myX = myX + (int)(Math.random()*4)-1;
+   myY = myY + (int)(Math.random()*4)-1;
+     }
+     if (myX > 250 && myY > 250){
+   myY = myY + (int)(Math.random()*4)-2;
+   myX = myX + (int)(Math.random()*4)-2;
+     }
+     if (myX < 250 && myY > 250){
+   myY = myY + (int)(Math.random()*4)-3;
+   myX = myX + (int)(Math.random()*4);
+     }
+   }
+   
+   void show() {
+   fill(myColor);
+   ellipse(myX,myY,mySize,mySize);
+   }
+   
+   Bacteria(int x, int y){
+   myColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+   mySize = 30;
+   myX = x;
+   myY = y;
+ }
+ }
