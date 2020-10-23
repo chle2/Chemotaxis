@@ -4,7 +4,7 @@
   {
   	//initialize bacteria variables here 
     size(400,400);
-    for(int i = 0, i < bob.length; i++)
+    for(int i = 0; i < bob.length; i++)
     {
     bob[i] = new Bacteria();
     }
@@ -51,4 +51,4 @@
    }
    
  }
- }
+ 
